@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../STAJ"
+		},
+		{
+			"path": "../FastApi"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
