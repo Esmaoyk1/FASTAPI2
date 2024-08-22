@@ -14,10 +14,10 @@ models.Base.metadata.create_all(bind = engine)
 
 def get_db():
     try:
-        db =SessionLocal()
-        yield db
+        db =SessionLocal()   ## Yeni bir oturum oluşturur
+        yield db                 # Bu oturumu bağımlılık olarak sağlar
     finally:
-        db.close()
+        db.close()           # Oturumu kapatır ve kaynakları serbest bırakır
 
 
 
@@ -94,6 +94,9 @@ def delete_book(book_id : int ,  db: Session = Depends(get_db)):
     
     db.commit()
     return f"Silme işlemi başarılı.."
+
+
+
 
    
     
